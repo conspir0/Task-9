@@ -1,0 +1,52 @@
+.btn {
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    outline: none;
+    overflow: hidden;
+    transition: .7s;
+}
+
+.btn:before {
+    position: absolute;
+    z-index: 1;
+    bottom: -25%;
+    right: 50%;
+    transform: translate(50%) rotate(45deg);
+    -webkit-transform: translate(50%) rotate(45deg);
+    -moz-transform: translate(50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    content: '';
+    background: #f9ca24;
+    transition: .2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #f6e58d;
+}
+
+.btn:hover:before {
+    bottom: -10%;
+}
+
+/* RWD
+------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    .btn:before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        padding: 10px 15px;
+    }
+}
