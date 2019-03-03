@@ -1,0 +1,26 @@
+.content {
+    margin: 3%;
+}
+
+.content-title {
+    margin: 0 0 25px;
+    font-size: 75px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.content-title::first-letter {
+    font-size: 90px;
+}
+
+/* RWD
+------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .content-title::first-letter {
+        font-size: 60px;
+    }
+
+    .content-title {
+        font-size: 50px;
+    }
+}
