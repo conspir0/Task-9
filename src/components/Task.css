@@ -1,0 +1,41 @@
+.task {
+    margin: 20px 0;
+}
+
+.task-title {
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: .5px;
+    background: #f4de71;
+}
+
+.task-text {
+    margin: 0;
+    padding: 30px 20px 20px;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.75px;
+    background: #f6e58d;
+}
+
+/* RWD
+------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .task {
+        margin: 3% 0;
+    }
+
+    .task-title {
+        padding: 10px 20px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .task-text {
+        padding: 10px 20px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+}

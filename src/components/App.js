@@ -9,22 +9,22 @@ class App extends Component {
   };
 
   handleClick = e => {
+    const task = {
+      id: this.state.tasks.length + 1,
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus diam sed volutpat euismod. Aliquam erat volutpat. Quisque viverra, metus eu accumsan condimentum, dui dolor imperdiet erat, sed dapibus libero mauris eget nisi. Pellentesque maximus ex interdum consequat luctus. Nam sed dui massa. Quisque id tincidunt nibh, vel maximus ex."
+    };
+
     // Button ADD task
     // ----------------------------------------
     if (e.target.name === "add") {
-      const task = {
-        id: this.state.tasks.length + 1,
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus diam sed volutpat euismod. Aliquam erat volutpat. Quisque viverra, metus eu accumsan condimentum, dui dolor imperdiet erat, sed dapibus libero mauris eget nisi. Pellentesque maximus ex interdum consequat luctus. Nam sed dui massa. Quisque id tincidunt nibh, vel maximus ex"
-      };
-
       this.setState({
         tasks: [...this.state.tasks, task]
       });
       // Button REMOVE (last) task
       // ----------------------------------------
     } else if (e.target.name === "remove") {
-      const tasks = this.state.tasks;
+      const tasks = [...this.state.tasks];
       tasks.pop();
 
       this.setState({
