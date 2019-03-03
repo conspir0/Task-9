@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Btn from "./Btn";
+import TasksList from "./TasksList";
 
 class App extends Component {
   state = {
@@ -47,7 +48,7 @@ class App extends Component {
           <Btn name="remove" click={this.handleClick} />
           <Btn name="reset" click={this.handleClick} />
         </div>
-        {/* <TaskList/> */}
+        <TasksList tasks={this.state.tasks} />
       </section>
     );
   }
